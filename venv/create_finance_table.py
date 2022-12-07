@@ -98,9 +98,25 @@ try:
     ]
     cursor.executemany(sql, val)
     print(cursor.rowcount, "was inserted.")
-
     # Commit changes
     db.commit()
+
+    print("customer_table")
+    cursor.execute("Select * from customer_table;")
+    rows=cursor.fetchall()
+    for row in rows:
+        for col in row:
+            print(col,end=" ")
+        print()
+        
+    print("Transaction_table")
+    cursor.execute("Select * from transaction_table;")
+    rows=cursor.fetchall()
+    for row in rows:
+        for col in row:
+            print(col,end=" ")
+        print()
+
     # Close connection
     db.close()
 
