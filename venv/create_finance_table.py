@@ -108,7 +108,7 @@ try:
         for col in row:
             print(col,end=" ")
         print()
-        
+
     print("Transaction_table")
     cursor.execute("Select * from transaction_table;")
     rows=cursor.fetchall()
