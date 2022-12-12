@@ -18,7 +18,7 @@ try:
     rows = cursor.fetchall()
     for row in rows:
         for col in row:
-            print(round(col, 2), end=" ")
+            print("$" + str(round(col, 2)), end=" ")
         print()
 
     cursor = db.cursor()
